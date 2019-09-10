@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calendrier: one
+  date: 2019-09-10 16:22:09
+  name: MyString
+  photo: one
+  album: one
+
+two:
+  calendrier: two
+  date: 2019-09-10 16:22:09
+  name: MyString
+  photo: two
+  album: two
