@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-item: center;
+  background-color: #F2781C;
+}
+
+.nav_titre {
+  font-size: 1.5rem;
+  margin: .5rem;
+  a {
+    color: #2F4858;
+  }
+}
+
+.nav_titre a:hover{
+  color: #676A8B;
+}
+
+.nav_links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav_links li {
+  list-style: none;
+}
+
+.nav_links li a {
+  color: #2F4858;
+  padding: 1rem;
+  display: block;
+}
+
+.nav_links li:hover {
+  background-color: #F5964F;
+}
+

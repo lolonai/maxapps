@@ -1,0 +1,14 @@
+@import "components/*";
+@import "home";
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F2F2F2;
+  color: #2F4858;
+}
