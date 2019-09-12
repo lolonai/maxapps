@@ -5,6 +5,9 @@ class GroupesController < ApplicationController
   def view
   end
 
+  def list
+  end
+
   def edit
   end
 
@@ -19,4 +22,6 @@ class GroupesController < ApplicationController
 
   def new
   end
+
+
 end
