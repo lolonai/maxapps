@@ -1,2 +1,6 @@
-<h1>Groupes#new</h1>
-<p>Find me in app/views/groupes/new.html.erb</p>
+<h2>Creer un groupe </h2>
+
+<%= simple_form_for @groupe do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,4 +1,5 @@
 class GroupesController < ApplicationController
+
   def show
   end
 
@@ -21,6 +22,7 @@ class GroupesController < ApplicationController
   end
 
   def new
+    @groupe = Groupe.new
   end
 
 
