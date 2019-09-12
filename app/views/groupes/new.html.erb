@@ -1,6 +1,7 @@
 <h2>Creer un groupe </h2>
 
-<%= simple_form_for @groupe do |f| %>
+<%= simple_form_for(@groupe) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo %>
   <%= f.button :submit %>
 <% end %>
