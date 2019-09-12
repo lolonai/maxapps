@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users
 
   root to: 'pages#home', as: 'home'
 
   resources :groupes, only: %i[show view edit update new create delete]
+  get '/groupes', to: 'groupes#list', as: 'list'
+
 
   resources :albums, only: %i[show edit update new create delete]
 
