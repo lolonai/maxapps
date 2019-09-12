@@ -27,7 +27,7 @@ gem 'simple_form'
 
 gem 'cloudinary'
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave'
 
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Active Storage variant
