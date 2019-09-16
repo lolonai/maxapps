@@ -1,0 +1,7 @@
+liste des groupes
+
+<% @groupes.each do |groupe| %>
+  <%= link_to groupe_path(groupe.id) do %>
+    <p> <%= groupe.name %> </p>
+  <% end %>
+<% end %>

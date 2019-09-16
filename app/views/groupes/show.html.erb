@@ -1,2 +1,6 @@
-<h1>Groupes#show</h1>
-<p>Find me in app/views/groupes/show.html.erb</p>
+Liste des membres
+<p>Admin- <%= @groupe.admin.name %></p>
+
+<% @membres.each do |membre| %>
+  <p> <%= membre.user.name%> </p>
+<% end %>
