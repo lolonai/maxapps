@@ -1,13 +1,14 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-item: center;
+  align-items: center;
   background-color: #ffbb52;
 }
 
 .nav_titre {
   font-size: 2rem;
   margin: .5rem;
+  padding-left: 1rem;
   a {
     color: #2F4858;
   }
@@ -17,24 +18,38 @@
   color: #676A8B;
 }
 
-.nav_links ul {
+.nav_left {
+  display: flex;
+  align-items: center;
+  p {
+    font-style: italic;
+    font-size: 1.3rem;
+    padding-left: 3rem;
+  }
+}
+
+.online {
+  color: green;
+}
+
+.nav_right ul {
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.nav_links li {
+.nav_right li {
   list-style: none;
   font-size: 1.3rem;
 }
 
-.nav_links li a {
+.nav_right li a {
   color: #2F4858;
-  padding: 1rem;
+  padding: 1.3rem;
   display: block;
 }
 
-.nav_links li:hover {
+.nav_right li:hover {
   background-color: #FDC670;
 }
 
