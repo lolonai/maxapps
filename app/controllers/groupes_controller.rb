@@ -1,5 +1,5 @@
 class GroupesController < ApplicationController
-  # before_action :set_groupe, only: %i[show edit delete update]
+  before_action :set_groupe, only: %i[show edit delete update]
   before_action :set_user, only: %i[new create update]
 
   def view
@@ -28,6 +28,7 @@ class GroupesController < ApplicationController
   end
 
   def list
+    @groupes = Groupe.all
   end
 
   def edit
@@ -48,6 +49,10 @@ class GroupesController < ApplicationController
 
   def set_user
     @user = User.find(current_user.id)
+  end
+
+  def set_groupe
+    @groupe = Groupe.find(params[:id])
   end
 
 end
