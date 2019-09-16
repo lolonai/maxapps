@@ -1,19 +1,18 @@
-
-
 <nav class="navbar">
+  <div class="nav_left">
     <h1 class="nav_titre"> <%= link_to home_path do %> Maxapps <% end %> </h1>
-    <div class="nav_links">
-      <ul>
-        <% if user_signed_in? %>
-          <li> <%= link_to list_path do %> ma liste de groupe <% end %> </li>
-          <li> <%= link_to new_groupe_path do %> créer un groupe <% end %> </li>
-          <li> <%= link_to "déconnecter",destroy_user_session_path, method: :delete %> </li>
-
-        <% else %>
-          <li> <%= link_to new_user_registration_path do %> inscription <% end %> </li>
-          <li> <%= link_to new_user_session_path do %> connection <% end %> </li>
-        <% end %>
-
-      </ul>
-    </div>
+    <% if user_signed_in? %> <p><%= current_user.name %> - <span class="online">en ligne</span></p> <% end %>
+  </div>
+  <div class="nav_right">
+    <ul>
+      <% if user_signed_in? %>
+        <li> <%= link_to list_path do %> ma liste de groupe <% end %> </li>
+        <li> <%= link_to new_groupe_path do %> créer un groupe <% end %> </li>
+        <li> <%= link_to "déconnecter",destroy_user_session_path, method: :delete %> </li>
+      <% else %>
+        <li> <%= link_to new_user_registration_path do %> inscription <% end %> </li>
+        <li> <%= link_to new_user_session_path do %> connection <% end %> </li>
+       <% end %>
+    </ul>
+   </div>
 </nav>
