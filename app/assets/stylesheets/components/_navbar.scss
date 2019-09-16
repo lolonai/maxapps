@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-item: center;
-  background-color: #F2781C;
+  background-color: #ffbb52;
 }
 
 .nav_titre {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: .5rem;
   a {
     color: #2F4858;
@@ -25,6 +25,7 @@
 
 .nav_links li {
   list-style: none;
+  font-size: 1.3rem;
 }
 
 .nav_links li a {
@@ -34,6 +35,6 @@
 }
 
 .nav_links li:hover {
-  background-color: #F5964F;
+  background-color: #FDC670;
 }
 
