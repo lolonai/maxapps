@@ -1,0 +1,36 @@
+.container {
+display: flex;
+justify-content: center;
+  .input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10%;
+    margin-bottom: 40px;
+    input {
+      width: 20vw;
+    }
+  }
+  .bloc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    a {
+      margin-left: 20px;
+    color: #2F4858;
+    }
+    .bouton {
+      background-color: #344147;
+      color: #F3F5F6;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 8px 24px;
+      text-decoration: none;
+    }
+    .bouton:hover {
+      background-color: #46555C;
+    }
+  }
+}
+
+
