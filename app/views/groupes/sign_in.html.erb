@@ -1,1 +1,9 @@
-sign_in
+<p> Sign in to <%= @groupe.name %></p>
+
+<%= simple_form_for(@groupe, :url => membre_add_path, :method => :post) do |f| %>
+  <%= f.input :password %>
+  <%= f.hidden_field :user, :value => @user.id %>
+  <%= f.hidden_field :groupe, :value => @groupe.id %>
+
+  <%= f.button :submit %>
+<% end %>

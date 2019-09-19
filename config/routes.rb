@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   resources :groupes, only: %i[show view edit update new create delete]
   get '/groupes', to: 'groupes#list', as: 'list'
-  get '/sign_in', to: 'groupes#sign_in', as: 'sign_group'
+  get '/sign_in/:id', to: 'groupes#sign_in', as: 'sign_group'
+  post '/membre_add', to: 'groupes#membre_add' , as: 'membre_add'
 
 
   resources :albums, only: %i[show edit update new create delete]
