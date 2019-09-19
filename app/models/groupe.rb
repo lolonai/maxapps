@@ -1,4 +1,6 @@
 class Groupe < ApplicationRecord
+  has_secure_password
+
   mount_uploader :photo, PhotoUploader
 
   belongs_to :admin, class_name: 'User', foreign_key: 'user_id'

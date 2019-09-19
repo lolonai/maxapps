@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_16_125019) do
+ActiveRecord::Schema.define(version: 2019_09_16_091916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,10 +55,10 @@ ActiveRecord::Schema.define(version: 2019_09_16_125019) do
   create_table "groupes", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id", null: false
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "photo"
-    t.string "encrypted_password", default: ""
     t.index ["user_id"], name: "index_groupes_on_user_id"
   end
 
