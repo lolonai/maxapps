@@ -1,20 +1,18 @@
 .container {
 display: flex;
 justify-content: center;
+  h2 {
+    text-align: center;
+  }
   .input {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10%;
     margin-bottom: 40px;
     input {
       width: 20vw;
+      height: 3vh;
+      font-size: 1.2rem;
     }
   }
   .bloc {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
     a {
       margin-left: 20px;
     color: #2F4858;
