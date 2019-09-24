@@ -1,8 +1,27 @@
-<h2>Creer un groupe </h2>
+<div class="container">
+  <div class="formulaire">
+    <h2>Créer un groupe</h2>
 
-<%= simple_form_for(@groupe) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :password %>
-  <%= f.input :photo %>
-  <%= f.button :submit %>
-<% end %>
+    <%= form_for @groupe do |f| %>
+      <div class="input">
+        <div class="field">
+          <%= f.label :name, value: "nom" %><br />
+          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+        </div>
+        <div class="field">
+          <%= f.label :password, value: "mot de passe" %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+        <br>
+        <div class="field">
+          <%= f.file_field :photo %>
+        </div>
+      </div>
+      <div class="bloc">
+        <div class="actions">
+          <%= f.submit "Créer", class: "bouton" %>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
