@@ -1,9 +1,9 @@
 <nav class="navbar">
   <div class="nav_left">
     <div class="nav_titre">
-      <h1> <%= link_to home_path do %> Maxapps <% end %> </h1>
+      <p> <%= link_to home_path do %> Maxapps <% end %> </p>
     </div>
-    <% if user_signed_in? %> <p><%= current_user.name %> - <span class="online">en ligne</span></p> <% end %>
+    <% if user_signed_in? %> <p class="user"><%= current_user.name %> - <span class="online">en ligne</span></p> <% end %>
   </div>
   <div class="nav_right">
     <ul>
