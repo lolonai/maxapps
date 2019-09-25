@@ -1,7 +1,16 @@
-liste des groupes
+<div class="groupe_list">
+  <div class="list_box">
+      <h3 class="list_title">liste des groupes</h3>
+      <br>
+      <hr>
 
-<% @groupes.each do |groupe| %>
-  <%= link_to groupe_path(groupe.id) do %>
-    <p> <%= groupe.name %> </p>
-  <% end %>
-<% end %>
+    <div class="list_content">
+      <% @groupes.each do |groupe| %>
+         <%= link_to groupe_path(groupe.id) do %>
+          <p>— <%= groupe.name %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

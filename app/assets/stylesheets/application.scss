@@ -1,6 +1,7 @@
 @import "components/*";
 @import "devise/*";
 @import "home";
+@import "groupes";
 
 //font-family: 'Josefin Sans', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i&display=swap');
@@ -19,4 +20,9 @@ body {
   background-color: #F3F5F6;
   color: #2F4858;
   font-family: 'Lora', serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit
 }

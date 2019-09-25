@@ -1,3 +1,36 @@
-// Place all the styles related to the Groupes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.groupe_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  p {
+    font-family: 'Lora', serif;
+  }
+  hr {
+    color: #ffe74c;
+
+  }
+}
+
+
+.list_title {
+  width: 30vw;
+  text-align: center;
+  box-shadow: 2px 2px 1.5px;
+  background-color: #344147;
+  color: #f3f5f6;
+  padding: 5px 0px;
+
+}
+
+.list_content {
+  width: 30vw;
+  min-height: 60vh;
+  padding: 10px 0px;
+  padding-left: 5px;
+  box-shadow: 1px 1px .7px;
+
+}
+
+
