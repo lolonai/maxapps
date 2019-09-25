@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Users::ConfirmationsController < Devise::ConfirmationsController
+  # skip_before_action :show_groupe_nav
   # GET /resource/confirmation/new
   # def new
   #   super

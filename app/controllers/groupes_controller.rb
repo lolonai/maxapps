@@ -1,6 +1,7 @@
 class GroupesController < ApplicationController
   before_action :set_groupe, only: %i[show edit delete update sign_in]
   before_action :set_user, only: %i[new create update sign_in]
+  skip_before_action :show_groupe_nav, except: %i[show]
 
   def view
     @groupes = Groupe.all

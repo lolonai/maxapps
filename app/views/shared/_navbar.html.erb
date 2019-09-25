@@ -3,9 +3,6 @@
     <h1 class="nav_titre"> <%= link_to home_path do %> Maxapps <% end %> </h1>
     <% if user_signed_in? %> <p><%= current_user.name %> - <span class="online">en ligne</span></p> <% end %>
   </div>
-  <div class="nav_center">
-    <%= @groupe.name if @groupe %>
-  </div>
   <div class="nav_right">
     <ul>
       <% if user_signed_in? %>
