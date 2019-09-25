@@ -1,0 +1,6 @@
+Liste des membres
+<p>Admin- <%= @groupe.admin.name %></p>
+
+<% @membres.each do |membre| %>
+  <p> <%= membre.user.name%> </p>
+<% end %>

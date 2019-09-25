@@ -12,6 +12,10 @@
 
   <body>
     <%= render 'shared/navbar' %>
+    <% if @show_groupe_nav == true%>
+      <%= render 'shared/groupeNav' %>
+    <% end %>
     <%= yield %>
+
   </body>
 </html>
