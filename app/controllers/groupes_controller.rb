@@ -49,7 +49,7 @@ class GroupesController < ApplicationController
       membre.save!
       redirect_to groupe_path(groupe.id)
     else
-      redirect_to sign_group_path(@groupe.id)
+      redirect_to sign_group_path(groupe.id)
     end
 
 

@@ -1,9 +1,18 @@
-<p> Sign in to <%= @groupe.name %></p>
+<div class="container">
+  <div class="formulaire">
+    <br>
+    <h3> S'inscrire sur : <em> <%= @groupe.name %> </em> </h3>
 
-<%= simple_form_for(@groupe, :url => membre_add_path, :method => :post) do |f| %>
-  <%= f.input :password %>
-  <%= f.hidden_field :user, :value => @user.id %>
-  <%= f.hidden_field :groupe, :value => @groupe.id %>
+    <%= form_for @groupe, url: membre_add_path, method: :post do |f| %>
+    <div class="input">
+      <%= f.password_field :password, placeholder: "mot de passe" %>
+      <%= f.hidden_field :user, :value => @user.id %>
+      <%= f.hidden_field :groupe, :value => @groupe.id %>
+    </div>
+    <div class="bloc">
+      <%= f.submit "entrer", class: "bouton" %>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-  <%= f.button :submit %>
-<% end %>
