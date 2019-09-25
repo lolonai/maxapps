@@ -3,12 +3,13 @@
   justify-content: space-between;
   align-items: center;
   background-color: #344147;
+  top: 0;
+  height: 64px;
 }
 
 .nav_titre {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   margin: 0;
-  padding: 1rem;
   font-family: 'Josefin Sans', sans-serif;
   left: 0;
   width: 200px;
@@ -38,23 +39,17 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.nav_center {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #F3F5F6;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
 .nav_right ul {
   margin: 0;
   padding: 0;
-  margin-right: 1rem;
   display: flex;
 }
 
 .nav_right li {
   list-style: none;
   font-size: 1.2rem;
+  height: 64px;
+  width: 200px;
 }
 
 .nav_right li a {

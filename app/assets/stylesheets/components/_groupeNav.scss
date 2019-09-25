@@ -7,10 +7,14 @@
   padding-top: 20px;
   color: #F3F5F6;
   h3 {
-    padding: 6px 6px 6px 32px;
+    text-align: center;
   }
   a {
     display: block;
-    padding: 6px 6px 6px 32px;
+    padding: 6px 6px 6px 40px;
+  }
+  a:hover {
+    background-color: #F3F5F6;
+    color: #46555C;
   }
 }
