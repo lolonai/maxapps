@@ -1,7 +1,9 @@
-liste des groupes
+<div class="container">
+  liste des groupes
 
-<% @groupes.each do |groupe| %>
-  <%= link_to groupe_path(groupe.id) do %>
-    <p> <%= groupe.name %> </p>
+  <% @groupes.each do |groupe| %>
+    <%= link_to groupe_path(groupe.id) do %>
+      <p class="groupe_list"> <%= groupe.name %> </p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
