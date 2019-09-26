@@ -6,7 +6,7 @@
 
     <div class="list_content">
       <% @groupes.each do |groupe| %>
-         <%= link_to groupe_path(groupe.id) do %>
+         <%= link_to groupe_photos_path(groupe) do %>
           <p>— <%= groupe.name %></p>
         <% end %>
       <% end %>
