@@ -1,4 +1,7 @@
 <div class="groupeNav">
+  <div class="logo-groupe-nav">
+    <%= cl_image_tag(@groupe.photo, :height=>180, :width=>180, :radius=>:max, :border=>"5px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+  </div>
   <h3><em><%= @groupe.name if @groupe %></em></h3>
   <hr>
   <br>
