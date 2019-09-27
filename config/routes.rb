@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   get '/groupes', to: 'groupes#list', as: 'list'
+  get 'groupes/:id/membres_list', to: 'groupes#membre_list', as: 'membre_list'
   get '/sign_in/:id', to: 'groupes#sign_in', as: 'sign_group'
   post '/membre_add', to: 'groupes#membre_add' , as: 'membre_add'
 

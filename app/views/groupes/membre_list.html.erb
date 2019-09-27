@@ -1,6 +1,17 @@
-Liste des membres
-<p>Admin- <%= @groupe.admin.name %></p>
+<div class="container-groupe-margin">
+  <div class="groupe_list">
+    <div class="list_box">
+        <h3 class="list_title">Liste des membres</h3>
+        <br>
+        <hr>
 
-<% @membres.each do |membre| %>
-  <p> <%= membre.user.name%> </p>
-<% end %>
+      <div class="list_content">
+        <p>Admin- <%= @groupe.admin.name %></p>
+        <% @membres.each do |membre| %>
+          <p> <%= membre.user.name%> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

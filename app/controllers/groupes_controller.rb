@@ -1,7 +1,8 @@
 class GroupesController < ApplicationController
-  before_action :set_groupe, only: %i[show edit delete update sign_in]
+  before_action :set_groupe, only: %i[edit delete update sign_in membre_list]
+  before_action :membre_verify, only: %i[edit delete update]
   before_action :set_user, only: %i[new create update sign_in]
-  skip_before_action :show_groupe_nav, except: %i[show]
+  skip_before_action :show_groupe_nav, except: %i[membre_list]
 
   def view
     @groupes = Groupe.all
@@ -25,12 +26,8 @@ class GroupesController < ApplicationController
     end
   end
 
-  def show
+  def membre_list
     @membres = Membre.where(groupe_id: @groupe.id).joins(:user)
-    if Membre.where(groupe_id: @groupe.id, user_id: current_user.id).count > 0
-    else
-      redirect_to sign_group_path(@groupe.id)
-    end
   end
 
   def sign_in
@@ -48,14 +45,11 @@ class GroupesController < ApplicationController
       membre.user_id = membre_params[:user]
       membre.groupe_id = membre_params[:groupe]
       membre.save!
-      redirect_to groupe_path(groupe.id)
+      redirect_to groupe_photos_path(groupe.id)
     else
       redirect_to sign_group_path(groupe.id)
     end
-
-
   end
-
 
   def list
     @groupes = Groupe.all
@@ -89,8 +83,12 @@ class GroupesController < ApplicationController
     @groupe = Groupe.find(params[:id])
   end
 
-
+  def membre_verify
+    if Membre.where(groupe_id: @groupe.id, user_id: current_user.id).count > 0
+    else
+      redirect_to sign_group_path(@groupe.id)
+    end
+  end
 
 end
-
 
