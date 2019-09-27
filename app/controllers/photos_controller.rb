@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   skip_before_action :show_groupe_nav, only: %i[create update delete]
 
   def index
-    @photos = Photo.all
+    @photos = Photo.where(groupe_id: @groupe.id)
   end
 
   def new
