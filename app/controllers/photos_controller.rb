@@ -3,7 +3,14 @@ class PhotosController < ApplicationController
   skip_before_action :show_groupe_nav, only: %i[create update delete]
 
   def index
-    @photos = Photo.where(groupe_id: @groupe.id)
+    # byebug
+    if params[:query]
+      @photos = Photo.where(groupe_id: @groupe.id).order(created_at: :asc)
+    else
+      @photos = Photo.where(groupe_id: @groupe.id).order(created_at: :desc)
+    end
+
+
   end
 
   def new
@@ -11,9 +18,14 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
-    @photo.user_id = current_user.id
-    @photo.groupe_id = @groupe.id
+    photo_params[:photo].each do |img|
+      @photo = Photo.new
+      @photo.description = photo_params[:description]
+      @photo.user_id = current_user.id
+      @photo.groupe_id = @groupe.id
+      @photo.photo = img
+      @photo.save!
+    end
     if @photo.save!
       redirect_to groupe_photos_path, notice: 'Groupe Crée !'
     else
@@ -30,7 +42,7 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:description, :photo)
+    params.require(:photo).permit(:description, {photo: []})
   end
 
   def set_groupe
