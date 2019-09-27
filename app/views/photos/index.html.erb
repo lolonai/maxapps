@@ -1,8 +1,16 @@
 <div class="container-groupe-margin">
   <h1>groupe show !!  !</h1>
   <p><%= link_to "ajouter des photos", new_groupe_photo_path(@groupe) %></p>
+
+  <% if params[:query] %>
+    <%= link_to "recente", groupe_photos_path(@groupe)  %>
+  <% else %>
+    <%= link_to "anciente", groupe_photos_path(@groupe, :query => "order")  %>
+  <% end %>
   <% if @photos.present? %>
-    <%= cl_image_tag(@photos.last.photo, :height=>180, :width=>180, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+    <% @photos.each do |pic| %>
+      <%= cl_image_tag(pic.photo, :height=>180, :width=>180, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+    <% end %>
   <% end %>
 
 </div>_
