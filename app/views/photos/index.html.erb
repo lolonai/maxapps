@@ -1,5 +1,8 @@
 <div class="container-groupe-margin">
   <h1>groupe show !!  !</h1>
   <p><%= link_to "ajouter des photos", new_groupe_photo_path(@groupe) %></p>
-  <%= cl_image_tag(@photos.last.photo, :height=>180, :width=>180, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+  <% if @photos.present? %>
+    <%= cl_image_tag(@photos.last.photo, :height=>180, :width=>180, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+  <% end %>
+
 </div>_
