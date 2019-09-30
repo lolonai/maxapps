@@ -6,9 +6,15 @@
         <hr>
 
       <div class="list_content">
-        <p>Admin- <%= @groupe.admin.name %></p>
+        <p> <%= @groupe.admin.name %> - Administateur</p>
         <% @membres.each do |membre| %>
+          <% if membre.user.id == @groupe.admin.id %>
+          <% else %>
           <p> <%= membre.user.name%> </p>
+
+          <% end %>
+
+
         <% end %>
       </div>
     </div>
