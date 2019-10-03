@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'awesome_rails_console'
+gem 'font-awesome-sass', '~> 5.11.2'
+
 
 gem 'simple_form'
 
