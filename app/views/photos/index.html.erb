@@ -1,6 +1,6 @@
 <div class="container-groupe-margin">
   <div class="container-photo">
-    <h1>groupe show !!  !</h1>
+    <h1>Photos</h1>
     <div class="gallery">
 
       <div class="gallery-option">
@@ -17,7 +17,9 @@
       <div class="gallery-img">
         <% if @photos.present? %>
           <% @photos.each do |pic| %>
-            <%= cl_image_tag(pic.photo, :height=>200, :width=>200, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+            <%= link_to groupe_photo_path(@groupe, pic) do %>
+              <%= cl_image_tag(pic.photo, :height=>200, :width=>200, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+            <% end %>
           <% end %>
         <% end %>
       </div>

@@ -1,2 +1,6 @@
-<h1>Photos#show</h1>
-<p>Find me in app/views/photos/show.html.erb</p>
+<div class="container-groupe-margin">
+  <%= cl_image_tag(@photo.photo, :height=>200, :width=>200, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+
+  <h1><%= @photo.description %></h1>
+  <p><%= User.find(@photo.user_id).name %></p>
+</div>
