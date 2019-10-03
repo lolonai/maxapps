@@ -5,6 +5,10 @@
     </div>
     <% if user_signed_in? %> <p class="user"><%= current_user.name %> - <span class="online">en ligne</span></p> <% end %>
   </div>
+  <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="far fa-caret-square-down"></i>
+    </label>
   <div class="nav_right">
     <ul>
       <% if user_signed_in? %>
@@ -15,6 +19,9 @@
         <li> <%= link_to new_user_registration_path do %> inscription <% end %> </li>
         <li> <%= link_to new_user_session_path do %> connection <% end %> </li>
        <% end %>
+       <label for="chk" class="hide-menu-btn">
+        <i class="fas fa-times"></i>
+      </label>
     </ul>
    </div>
 </nav>
