@@ -6,8 +6,7 @@
 
 .chatBoxEntiere {
   clear: both;
-  overflow: hidden;
-  width: 80vw;
+  width: 70vw;
   margin-top: 10px;
 }
 
@@ -45,6 +44,10 @@
   display: block;
   font-size: 12px;
   margin: 8px 0 0;
+}
+
+.date_right {
+  text-align: right;
 }
 
 .received_withd_msg {
@@ -106,6 +109,6 @@
 }
 
 .msg_history {
-  height: 516px;
   overflow-y: auto;
+  height: 516px;
 }
