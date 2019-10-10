@@ -7,22 +7,23 @@
 
       <div class="msg_history">
         <% @messages.each do |message| %>
+        <% date = message.created_at.strftime("le %d %b %Y à %H:%M ") %>
           <% if message.user == current_user %>
 
-            <div class="outgoing_msg">
+            <div class="outgoing_msg msg">
               <div class="sent_msg">
                 <p><%= message.contenu %></p>
-                <span class="time_date"> 11:01 AM <%=  %> | June 9 <%= message.user.name %></span>
+                <span class="time_date date_right"> <%= date %></span>
               </div>
             </div>
 
           <% else %>
 
-            <div class="incoming_msg">
+            <div class="incoming_msg msg">
               <div class="received_msg">
                 <div class="received_withd_msg">
                   <p><%= message.contenu %></p>
-                  <span class="time_date"> 11:01 AM    |    June 9 <%= message.user.name %></span>
+                  <span class="time_date"> <%= message.user.name %> <%= date %></span>
                 </div>
               </div>
             </div>
