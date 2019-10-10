@@ -5,41 +5,32 @@
 }
 
 .chatBoxEntiere {
-  border: 1px solid #c4c4c4;
   clear: both;
   overflow: hidden;
-  width: 700px;
-  max-height: 88%;
+  width: 80vw;
   margin-top: 10px;
 }
 
-// .chatBoxMessage {
-//   margin: 4px;
-// }
+.top_spac{
+  margin: 20px 0 0;
+}
 
- // test code
-
-
-// .inbox_msg {
-//   border: 1px solid #c4c4c4;
-//   clear: both;
-//   overflow: hidden;
-// }
-
-
-img{ max-width:100%;}
-.top_spac{ margin: 20px 0 0;}
+.msg {
+  margin-bottom: 12px;
+}
 
 .incoming_msg_img {
   display: inline-block;
   width: 6%;
 }
+
 .received_msg {
   display: inline-block;
   padding: 0 0 0 10px;
   vertical-align: top;
   width: 92%;
  }
+
  .received_withd_msg p {
   background: #ebebeb none repeat scroll 0 0;
   border-radius: 3px;
@@ -55,11 +46,13 @@ img{ max-width:100%;}
   font-size: 12px;
   margin: 8px 0 0;
 }
-.received_withd_msg { width: 57%;}
+
+.received_withd_msg {
+  width: 57%;
+}
+
 .mesgs {
-  // float: left;
   padding: 30px 15px 0 25px;
-  // width: 60%;
 }
 
  .sent_msg p {
@@ -70,7 +63,12 @@ img{ max-width:100%;}
   padding: 5px 10px 5px 12px;
   width:100%;
 }
-.outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
+
+.outgoing_msg{
+  overflow:hidden;
+  margin:26px 0 26px;
+}
+
 .sent_msg {
   float: right;
   width: 46%;
@@ -102,7 +100,11 @@ img{ max-width:100%;}
   top: 11px;
   width: 33px;
 }
-.messaging { padding: 0 0 50px 0;}
+
+.messaging {
+  padding: 0 0 50px 0;
+}
+
 .msg_history {
   height: 516px;
   overflow-y: auto;
