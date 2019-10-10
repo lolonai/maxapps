@@ -1,0 +1,33 @@
+<div class="container-groupe-margin">
+  <div class="chatBox">
+    <div class="chatBoxEntiere">
+      <h1>Messageries#index</h1>
+
+      <% @messages.each do |message| %>
+
+      <div class="chatBoxMessage">
+        <% if message.user == current_user %>
+        <div class="chatBoxCurrentUserBox">
+          <div class="chatBoxCurrentUser">
+            <div class="chatBoxCurrentUserName"><%= message.user.name %> <%= message.contenu %></div>
+          </div>
+        </div>
+
+        <% else %>
+        <div class="chatBoxOtherUserBox">
+          <div class="chatBoxOtherUser">
+            <div class="chatBoxOtherUserName"><%= message.user.name %> <%= message.contenu %></div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+      <% end %>
+      <%= form_for([@groupe, Message.new]) do |f| %>
+        <%= f.text_area :contenu, rows: 1, autofocus: true %>
+        <%= f.submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
