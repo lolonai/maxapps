@@ -20,6 +20,9 @@ class GroupesController < ApplicationController
       membre.user_id = current_user.id
       membre.groupe_id = @groupe.id
       membre.save!
+      messagerie = Messagerie.new
+      messagerie.groupe_id = @groupe.id
+      messagerie.save!
       redirect_to groupe_photos_path(@groupe), notice: 'Groupe Crée !'
     else
       render :new

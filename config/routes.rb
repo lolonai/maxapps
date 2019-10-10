@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :groupes, only: %i[show view edit update new create delete] do
     resources :photos, only: %i[show new create delete index]
+    resources :messageries, only: %i[index]
+    resources :messages, only: %i[create]
   end
 
   get '/groupes', to: 'groupes#list', as: 'list'
