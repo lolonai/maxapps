@@ -1,16 +1,15 @@
 <nav class="navbar">
   <div class="nav_left">
     <div class="nav_titre">
-      <p> <%= link_to home_path do %> Maxapps <% end %> </p>
+      <p id="nav_left_btn"> <%= link_to home_path, :media => "only screen and (min-width: 780px)" do %> Maxapps <% end %> </p>
     </div>
     <% if user_signed_in? %> <p class="user"><%= current_user.name %> - <span class="online">en ligne</span></p> <% end %>
   </div>
-  <input type="checkbox" id="chk">
-    <label for="chk" class="show-menu-btn">
-      <i class="far fa-caret-square-down"></i>
+    <label class="show-menu-btn">
+      <i class="far fa-caret-square-down" id="nav_right_btn"></i>
     </label>
-  <div class="nav_right">
-    <ul>
+  <div class="nav_right modal_hide">
+     <ul>
       <% if user_signed_in? %>
         <li> <%= link_to list_path do %> liste des groupes <% end %> </li>
         <li> <%= link_to new_groupe_path do %> créer un groupe <% end %> </li>
@@ -18,10 +17,30 @@
       <% else %>
         <li> <%= link_to new_user_registration_path do %> inscription <% end %> </li>
         <li> <%= link_to new_user_session_path do %> connection <% end %> </li>
-       <% end %>
-       <label for="chk" class="hide-menu-btn">
+      <% end %>
+      <label class="hide-menu-btn">
         <i class="fas fa-times"></i>
       </label>
     </ul>
-   </div>
+  </div>
+
+  <div class="nav_right_modal fade" id="navRightModal">
+    <div class="nav_right_modal_content nav_right">
+      <ul>
+        <% if user_signed_in? %>
+          <li> <%= link_to list_path do %> liste des groupes <% end %> </li>
+          <li> <%= link_to new_groupe_path do %> créer un groupe <% end %> </li>
+          <li> <%= link_to "déconnecter",destroy_user_session_path, method: :delete %> </li>
+        <% else %>
+          <li> <%= link_to new_user_registration_path do %> inscription <% end %> </li>
+          <li> <%= link_to new_user_session_path do %> connection <% end %> </li>
+        <% end %>
+        <label class="hide-menu-btn">
+          <i class="fas fa-times" id="nav_right_btn_close"></i>
+        </label>
+      </ul>
+    </div>
+  </div>
+
+
 </nav>

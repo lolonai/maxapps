@@ -1,4 +1,4 @@
-<div class="groupeNav">
+<div class="groupeNav modal_hidden">
   <div class="logo-groupe-nav">
     <%= cl_image_tag(@groupe.photo, :height=>180, :width=>180, :radius=>:max, :border=>"5px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
   </div>
@@ -10,3 +10,22 @@
   <%= link_to "Membres", membre_list_path(@groupe) %>
   <%= link_to "Messagerie", groupe_messageries_path(@groupe) %>
 </div>
+
+
+<div class="nav_left_modal fade" id="navLeftModal">
+    <div class="nav_left_modal_content groupeNav">
+      <div class="logo-groupe-nav">
+        <%= cl_image_tag(@groupe.photo, :height=>180, :width=>180, :radius=>:max, :border=>"5px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+      </div>
+      <h3><em><%= @groupe.name if @groupe %></em></h3>
+      <hr>
+      <br>
+      <%= link_to "Photos", groupe_photos_path(@groupe) %>
+      <%= link_to "Calendrier", groupe_photos_path(@groupe) %>
+      <%= link_to "Membres", membre_list_path(@groupe) %>
+      <%= link_to "Messagerie", groupe_messageries_path(@groupe) %>
+    </div>
+  </div>
+
+
+

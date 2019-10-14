@@ -23,4 +23,13 @@
   }
 }
 
+.nav_left_modal {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .modal_hidden {
+    display: none;
+  }
+}
 

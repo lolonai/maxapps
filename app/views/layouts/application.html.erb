@@ -20,4 +20,36 @@
     <%= yield %>
 
   </body>
+
+  <script>
+
+  var nav_right_modal = document.getElementById('navRightModal');
+  var nav_right_btn_open = document.getElementById('nav_right_btn');
+  var nav_right_btn_close = document.getElementById('nav_right_btn_close');
+  var nav_left_modal = document.getElementById('navLeftModal');
+  var nav_left_btn_open = document.getElementById('nav_left_btn');
+
+  nav_right_btn_open.onclick = function() {
+    nav_right_modal.style.display = "block";
+  }
+
+  nav_right_btn_close.onclick = function() {
+    nav_right_modal.style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    if (event.target == nav_right_modal) {
+      nav_right_modal.style.display = 'none';
+    }
+    else if (event.target == nav_left_modal) {
+      nav_left_modal.style.display = 'none';
+    }
+  }
+
+  nav_left_btn_open.onclick = function() {
+    nav_left_modal.style.display = "block";
+  }
+
+</script>
+
 </html>
