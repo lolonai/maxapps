@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="nav_left">
     <div class="nav_titre">
-      <p id="nav_left_btn"> <%= link_to home_path, :media => "only screen and (min-width: 780px)" do %> Maxapps <% end %> </p>
+      <p id="nav_left_btn"> <%= link_to home_path do %> Maxapps <% end %> </p>
     </div>
     <% if user_signed_in? %> <p class="user"><%= current_user.name %> - <span class="online">en ligne</span></p> <% end %>
   </div>

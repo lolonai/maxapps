@@ -142,3 +142,7 @@
     right: 24px;
   }
 }
+
+a.disabled {
+  pointer-events: none;
+}
