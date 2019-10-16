@@ -19,3 +19,17 @@
     }
   }
 }
+
+.photo-show {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  .photo-retour {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .photo-add {
+    text-align: center;
+  }
+}
