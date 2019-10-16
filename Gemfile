@@ -31,9 +31,9 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 
-gem 'cloudinary'
+gem 'carrierwave', '~> 1.3.1'
 
-gem 'carrierwave'
+gem 'cloudinary', '~> 1.11.1'
 
 gem 'bcrypt'
 
