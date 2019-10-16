@@ -1,16 +1,19 @@
 <div class="container-groupe-margin">
-  <h1>Ajouter une nvlle photo !!!</h1>
+  <div class="photo-show">
+    <div class="photo-add">
+      <h1>Vous pouvez ajouter autant photo que vous le voulez</h1>
 
-  <%= form_for ([@groupe, @photo]), :html => {:multipart => true} do |f| %>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description, size: "30x5" %>
-  </p>
-  <p>
-    <%= f.file_field :photo, multiple: true %>
-  </p>
+      <%= form_for ([@groupe, @photo]), :html => {:multipart => true} do |f| %>
+        <p>
+          <%= f.label :description %><br />
+          <%= f.text_area :description, size: "30x4" %>
+        </p>
+        <p> <%= f.file_field :photo, multiple: true %> </p>
+        <p> <%= f.submit %></p>
+      <% end %>
+      <br>
+      <%= link_to "Retour", groupe_photos_path(@groupe) %>
+    </div>
+  </div>
 
-  <p><%= f.submit %></p>
-<% end %>
-
-</div>_
+</div>

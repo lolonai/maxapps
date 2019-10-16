@@ -1,6 +1,13 @@
 <div class="container-groupe-margin">
-  <%= cl_image_tag(@photo.photo, :height=>200, :width=>200, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
-
-  <h1><%= @photo.description %></h1>
-  <p><%= User.find(@photo.user_id).name %></p>
+  <div class="photo-show">
+    <div class="photo-detail">
+      <%= cl_image_tag(@photo.photo, :height=>300, :width=>400, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
+      <h1><%= @photo.description %></h1>
+      <div class="photo-retour">
+        <p><%= User.find(@photo.user_id).name %></p>
+        <%= link_to "Retour", groupe_photos_path(@groupe) %>
+      </div>
+    </div>
+  </div>
 </div>
+

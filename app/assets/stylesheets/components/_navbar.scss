@@ -83,7 +83,7 @@
   display: block;
 }
 
-.nav_right li:hover {
+.nav_right .list-right:hover {
   background-color: #F3F5F6;
   a {
   color: #344147;
@@ -141,8 +141,18 @@
     top: 12px;
     right: 24px;
   }
+
+  .user-hide {
+    display: none;
+  }
+
+  .user {
+    color: #F3F5F6;
+  }
 }
 
 a.disabled {
   pointer-events: none;
 }
+
+

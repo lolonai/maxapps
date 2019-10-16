@@ -32,3 +32,9 @@
   padding: 10px 0px;
   padding-left: 5px;
 }
+
+@media (max-width: 780px) {
+  .container-groupe-margin {
+    margin-left: 0;
+  }
+}
