@@ -25,7 +25,6 @@ class PhotosController < ApplicationController
       @photo.description = photo_params[:description]
       @photo.user_id = current_user.id
       @photo.groupe_id = @groupe.id
-      byebug
       @photo.photo = img
       @photo.save!
     end
