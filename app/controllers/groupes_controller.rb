@@ -4,9 +4,6 @@ class GroupesController < ApplicationController
   before_action :set_user, only: %i[new create update sign_in]
   skip_before_action :show_groupe_nav, except: %i[membre_list]
 
-  def view
-    @groupes = Groupe.all
-  end
 
   def new
     @groupe = Groupe.new
@@ -55,7 +52,11 @@ class GroupesController < ApplicationController
   end
 
   def list
-    @groupes = Groupe.all
+    if params[:query]
+      @groupes = Groupe.where(user_id: current_user.id)
+    else
+      @groupes = Groupe.all
+    end
   end
 
   def edit
