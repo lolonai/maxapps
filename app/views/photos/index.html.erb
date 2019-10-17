@@ -21,10 +21,12 @@
               <%= cl_image_tag(pic.photo, :height=>200, :width=>200, :border=>"3px_solid_rgb:344147", :crop=>:fill, :format=>:png) %>
             <% end %>
           <% end %>
+        <% else %>
+          <p>No Photos here yet</p>
         <% end %>
       </div>
 
     </div>
 
   </div>
-</div>_
+</div>
