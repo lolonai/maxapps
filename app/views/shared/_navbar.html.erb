@@ -11,8 +11,8 @@
   <div class="nav_right modal_hide">
      <ul>
       <% if user_signed_in? %>
-        <li> <%= link_to list_path do %> lListe des groupes <% end %> </li>
-        <li> <%= link_to list_path do %> Mes groupes <% end %> </li>
+        <li> <%= link_to list_path do %> Liste des groupes <% end %> </li>
+        <li> <%= link_to list_path(:query => "votre" ) do %> Mes groupes <% end %> </li>
         <li> <%= link_to new_groupe_path do %> Créer un groupe <% end %> </li>
         <li> <%= link_to "Déconnexion",destroy_user_session_path, method: :delete %> </li>
       <% else %>

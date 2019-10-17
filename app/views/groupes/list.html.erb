@@ -5,10 +5,14 @@
       <hr>
 
     <div class="list_content">
-      <% @groupes.each do |groupe| %>
-         <%= link_to groupe_photos_path(groupe) do %>
-          <p>— <%= groupe.name %></p>
+      <% if @groupes.present? %>
+        <% @groupes.each do |groupe| %>
+          <%= link_to groupe_photos_path(groupe) do %>
+            <p>— <%= groupe.name %></p>
+          <% end %>
         <% end %>
+        <% else %>
+        <p>Pas de Groupes</p>
       <% end %>
     </div>
   </div>
