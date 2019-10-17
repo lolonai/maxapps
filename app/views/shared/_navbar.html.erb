@@ -11,12 +11,13 @@
   <div class="nav_right modal_hide">
      <ul>
       <% if user_signed_in? %>
-        <li> <%= link_to list_path do %> liste des groupes <% end %> </li>
-        <li> <%= link_to new_groupe_path do %> créer un groupe <% end %> </li>
-        <li> <%= link_to "déconnecter",destroy_user_session_path, method: :delete %> </li>
+        <li> <%= link_to list_path do %> lListe des groupes <% end %> </li>
+        <li> <%= link_to list_path do %> Mes groupes <% end %> </li>
+        <li> <%= link_to new_groupe_path do %> Créer un groupe <% end %> </li>
+        <li> <%= link_to "Déconnexion",destroy_user_session_path, method: :delete %> </li>
       <% else %>
-        <li> <%= link_to new_user_registration_path do %> inscription <% end %> </li>
-        <li> <%= link_to new_user_session_path do %> connection <% end %> </li>
+        <li> <%= link_to new_user_registration_path do %> Inscription <% end %> </li>
+        <li> <%= link_to new_user_session_path do %> Connection <% end %> </li>
       <% end %>
       <label class="hide-menu-btn">
         <i class="fas fa-times"></i>
@@ -28,13 +29,15 @@
     <div class="nav_right_modal_content nav_right">
       <ul>
         <% if user_signed_in? %>
-          <li class="list-right"> <%= link_to list_path do %> liste des groupes <% end %> </li>
-          <li class="list-right"> <%= link_to new_groupe_path do %> créer un groupe <% end %> </li>
-          <li class="list-right"> <%= link_to "déconnecter",destroy_user_session_path, method: :delete %> </li>
+          <li class="list-right"> <%= link_to home_path do %> Accueil <% end %> </li>
+          <li class="list-right"> <%= link_to list_path do %> Liste des groupes <% end %> </li>
+          <li class="list-right"> <%= link_to list_path do %> Mes groupes <% end %> </li>
+          <li class="list-right"> <%= link_to new_groupe_path do %> Créer un groupe <% end %> </li>
+          <li class="list-right"> <%= link_to "Déconnexion",destroy_user_session_path, method: :delete %> </li>
           <li> <p class="user"><%= current_user.name %> - <span class="online">en ligne</span></p> </li>
         <% else %>
-          <li class="list-right"> <%= link_to new_user_registration_path do %> inscription <% end %> </li>
-          <li class="list-right"> <%= link_to new_user_session_path do %> connection <% end %> </li>
+          <li class="list-right"> <%= link_to new_user_registration_path do %> Inscription <% end %> </li>
+          <li class="list-right"> <%= link_to new_user_session_path do %> Connection <% end %> </li>
         <% end %>
         <label class="hide-menu-btn">
           <i class="fas fa-times" id="nav_right_btn_close"></i>
