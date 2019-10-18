@@ -3,7 +3,6 @@
       <h3 class="list_title">liste des groupes</h3>
       <br>
       <hr>
-
     <div class="list_content">
       <% if @groupes.present? %>
         <% @groupes.each do |groupe| %>
@@ -12,9 +11,8 @@
           <% end %>
         <% end %>
         <% else %>
-        <p>Pas de Groupes</p>
+        <h3 style="text-align: center; font-style:italic; color:#ef3232;">pas encore groupes</h3>
       <% end %>
     </div>
   </div>
-
 </div>
