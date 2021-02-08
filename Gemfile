@@ -31,7 +31,7 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 
-gem 'carrierwave', '~> 1.3.1'
+gem 'carrierwave', '~> 1.3.2'
 
 gem 'cloudinary', '~> 1.11.1'
 
